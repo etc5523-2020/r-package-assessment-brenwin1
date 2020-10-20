@@ -1,16 +1,16 @@
-Package: yourPkg
-Title: What the Package Does (One Line, Title Case)
+Package: covidseasonality
+Title: Embedded Shiny App to assess Covid's Seasonality
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Brenwin",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "ang0005@student.monash.edu")
+Description: This package provides functions and data set for Shiny App that assesses covid seasonality.
+  Mainly for easier access and improved readability.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/etc5523-2020/r-package-assessment-brenwin1
+BugReports: https://github.com/etc5523-2020/r-package-assessment-brenwin1/issues
