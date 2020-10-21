@@ -14,3 +14,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://github.com/etc5523-2020/r-package-assessment-brenwin1
 BugReports: https://github.com/etc5523-2020/r-package-assessment-brenwin1/issues
+Imports: 
+    dplyr,
+    readr,
+    tidycovid19
+Depends: 
+    R (>= 2.10)

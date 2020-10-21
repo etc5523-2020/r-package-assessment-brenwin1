@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of covidseasonality is to …
+The goal of `covidseasonality` package is to improve the accessibility
+of the app to focus on its functionalities.
 
 ## Installation
 
