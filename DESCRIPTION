@@ -17,6 +17,8 @@ BugReports: https://github.com/etc5523-2020/r-package-assessment-brenwin1/issues
 Imports: 
     dplyr,
     readr,
-    tidycovid19
+    tidycovid19,
+    shiny,
+    magrittr
 Depends: 
     R (>= 2.10)

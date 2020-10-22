@@ -1,6 +1,6 @@
 #' Countries in the Tropics and each Hemisphere
 #'
-#' These data sets (tibbles) contain 203 countries classified in Northern & Southern Hemisphere and Tropics.
+#' @description These data sets (tibbles) contain 203 countries classified in Northern & Southern Hemisphere and Tropics.
 #' @usage Northern_hemis, Southern_hemis, Tropics
 #' @format 3 data frames with 1 variable(`country`) each:
 #' \describe{
@@ -10,20 +10,17 @@
 #' }
 #' @name CountriesHemisphere
 #' @rdname Tropics
-#' @aliases Northern_hemis,Southern_hemis,Tropics
-#' @source
-#' [ggplot2 map data](https://github.com/tidyverse/ggplot2) \cr
+#' @source [ggplot2 map data](https://github.com/tidyverse/ggplot2) \cr
 #' [tidycovid19 package](https://github.com/joachim-gassen/tidycovid19) \cr
 #' [worldpopulationreview](https://worldpopulationreview.com/country-rankings/tropical-countries) \cr
 "Tropics"
 
-#' @rdname CountriesHemisphere
+#' @rdname Tropics
 #' @name CountriesHemisphere
 #' @format NULL
-#'
 "Southern_hemis"
 
-#' @rdname CountriesHemisphere
+#' @rdname Tropics
 #' @name CountriesHemisphere
 #' @format NULL
 #'

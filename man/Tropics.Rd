@@ -4,7 +4,8 @@
 \name{CountriesHemisphere}
 \alias{CountriesHemisphere}
 \alias{Tropics}
-\alias{Northern_hemis,Southern_hemis,Tropics}
+\alias{Southern_hemis}
+\alias{Northern_hemis}
 \title{Countries in the Tropics and each Hemisphere}
 \format{
 3 data frames with 1 variable(\code{country}) each:
@@ -21,6 +22,10 @@
 }
 \usage{
 Northern_hemis, Southern_hemis, Tropics
+
+Southern_hemis
+
+Northern_hemis
 }
 \description{
 These data sets (tibbles) contain 203 countries classified in Northern & Southern Hemisphere and Tropics.
