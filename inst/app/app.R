@@ -14,7 +14,9 @@ library(covidseasonality) # my package!
 options(spinner.color="#d3d3d3")
 
 # ---------- join data
-join_data <- left_join(covidseasonality::data,
+data <- covidseasonality::covid_data
+
+join_data <- left_join(covidseasonality::covid_data,
                        covidseasonality::world,
                        by = c("country" = "region"))
 
