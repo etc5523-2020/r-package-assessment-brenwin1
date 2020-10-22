@@ -19,6 +19,11 @@ Imports:
     readr,
     tidycovid19,
     shiny,
-    magrittr
+    magrittr,
+    tibble,
+    ggplot2,
+    scales
 Depends: 
     R (>= 2.10)
+Suggests: 
+    testthat

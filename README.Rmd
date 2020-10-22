@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `covidseasonality` package is to improve the accessibility of the app to focus on its functionalities. 
+The goal of `covidseasonality` package is to improve the accessibility and readability of its corresponding Shiny app. 
 
 ## Installation
 
@@ -36,10 +36,25 @@ devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 ```
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example what the package includes  
 
-```{r example}
+inbuilt datasets with countries in each hemisphere 
+```{r dataset-eg}
 library(covidseasonality)
-## basic example code
+library(tibble)
+
+Northern_hemis # countries in the Northern Hemisphere
+```
+
+Takes data frame and plots daily cases against date. With shaded area indicating winter months.
+```{r plot-eg}
+library(dplyr)
+join_data <- left_join(filter(covidseasonality::covid_data, country == "Australia"), 
+                       filter(covidseasonality::world, region == "Australia"), 
+                       by = c("country" = "region"))
+
+join_data %>% 
+  filter(country == "Australia") %>% 
+  plot_countries_hemis()
 ```
 

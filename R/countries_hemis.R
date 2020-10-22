@@ -11,25 +11,25 @@
 #'     filter(country == "Singapore") %>%
 #'     countries_hemis()
 countries_hemis <- function(country){
-  if(pull(country) %in% Southern_hemis$country){
+  if(dplyr::pull(country) %in% Southern_hemis$country){
     shiny::selectInput(inputId = "Southern",
                        label = "Southern Hemisphere",
                        choices = country,
                        selected = "Australia")
   }
-  else if(pull(country) %in% Northern_hemis$country){
+  else if(dplyr::pull(country) %in% Northern_hemis$country){
     shiny::selectInput(inputId = "Northern",
                        label = "Northern Hemisphere",
                        choices = country,
                        selected = "Australia")
   }
-  else if(pull(country) %in% Tropics$country){
+  else if(dplyr::pull(country) %in% Tropics$country){
     shiny::selectInput(inputId = "Tropics",
                        label = "Tropics",
                        choices = country,
                        selected = "Singapore")
   }
+  else{NA}
 }
-
 
 

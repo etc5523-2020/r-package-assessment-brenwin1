@@ -31,7 +31,7 @@ data <- data %>%
   # remove last date (no data)
   filter(date != max(date))
 
-data <- data %>%
+covid_data <- data %>%
   # filter countries w/o cases
   dplyr::filter(!country %in% c("Caribbean Netherlands",
                                 "Gibraltar",
@@ -94,7 +94,7 @@ world <- world %>%
     TRUE ~ hemisphere
   ))
 
-join_data <- left_join(data, world,
+join_data <- left_join(covid_data, world,
                        by = c("country" = "region")) %>%
   select(-c(iso3c, order, subregion, region))
 
@@ -119,7 +119,9 @@ Tropics <- join_data %>%
 
 usethis::use_data(Tropics, overwrite = TRUE)
 
-usethis::use_data(data, world, internal = TRUE, overwrite = TRUE)
+usethis::use_data(covid_data, overwrite = TRUE)
+usethis::use_data(world, overwrite = TRUE)
+
 
 
 

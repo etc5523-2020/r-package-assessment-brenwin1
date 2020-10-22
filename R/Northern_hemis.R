@@ -9,18 +9,17 @@
 #' \item{`Tropics`}{countries in the tropics}
 #' }
 #' @name CountriesHemisphere
-#' @rdname Northern_hemis
 #' @source [ggplot2 map data](https://github.com/tidyverse/ggplot2) \cr
 #' [tidycovid19 package](https://github.com/joachim-gassen/tidycovid19) \cr
 #' [worldpopulationreview](https://worldpopulationreview.com/country-rankings/tropical-countries) \cr
 "Northern_hemis"
 
-#' @rdname Northern_hemis
-#' @name CountriesHemisphere
+#' @rdname CountriesHemisphere
 #' @format NULL
+#' @usage NULL
 "Southern_hemis"
 
-#' @rdname Northern_hemis
-#' @name CountriesHemisphere
+#' @rdname CountriesHemisphere
 #' @format NULL
+#' @usage NULL
 "Tropics"

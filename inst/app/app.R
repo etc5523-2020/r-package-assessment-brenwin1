@@ -217,52 +217,16 @@ server <- function(input, output){
     # southern
     southern <- join_data %>%
       filter(country == input$Southern) %>%
-      ggplot() +
-      geom_line(aes(x = date,
-                    y = cases)) +
-      scale_x_date(date_breaks = "1 month", # 1 month break in date
-                   date_labels = format("%b"), # label month; abbrev.
-                   limits = as.Date(c("2020-01-01", "2020-12-31"))) + # x-axis scale: Jan - Oct
-      scale_y_continuous(label = scales::comma) +
-      annotate("rect",
-               xmin = as.Date("2020-06-01"),
-               xmax = as.Date("2020-08-31"),
-               ymin = -Inf, ymax = Inf,
-               fill = "sky blue", alpha = 0.3) +
-      theme_bw() +
-      labs(x = "Date",
-           y = "cases",
-           title = "New confirmed cases of Covid-19",
-           subtitle = "01/01/20 - Present")
+      plot_countries_hemis()
 
     southern
   })
 
   output$northern <- renderPlot({
+    # northern plot
     northern <- join_data %>%
       filter(country == input$Northern) %>%
-      ggplot() +
-      geom_line(aes(x = date,
-                    y = cases)) +
-      scale_x_date(date_breaks = "1 month", # 1 month break in date
-                   date_labels = format("%b"), # label month; abbrev.
-                   limits = as.Date(c("2020-01-01", "2020-12-31"))) + # x-axis scale: Jan - Oct
-      scale_y_continuous(label = scales::comma) +
-      annotate("rect",
-               xmin = as.Date("2020-12-01"),
-               xmax = as.Date("2020-12-31"),
-               ymin = -Inf, ymax = Inf,
-               fill = "sky blue", alpha = 0.3) +
-      annotate("rect",
-               xmin = as.Date("2020-01-01"),
-               xmax = as.Date("2020-02-28"),
-               ymin = -Inf, ymax = Inf,
-               fill = "sky blue", alpha = 0.3) +
-      theme_bw() +
-      labs(x = "Date",
-           y = "cases",
-           title = "New confirmed cases of Covid-19",
-           subtitle = "01/01/20 - Present")
+      plot_countries_hemis()
 
     northern
   })
@@ -270,18 +234,7 @@ server <- function(input, output){
   output$tropics <- renderPlot({
     tropics <- join_data %>%
       filter(country == input$Tropics) %>%
-      ggplot() +
-      geom_line(aes(x = date,
-                    y = cases)) +
-      scale_x_date(date_breaks = "1 month", # 1 month break in date
-                   date_labels = format("%b"), # label month; abbrev.
-                   limits = as.Date(c("2020-01-01", "2020-12-31"))) +
-      scale_y_continuous(label = scales::comma) +
-      theme_bw() +
-      labs(x = "Date",
-           y = "cases",
-           title = "New confirmed cases of Covid-19",
-           subtitle = "01/01/20 - Present")
+      plot_countries_hemis()
 
     tropics
   })
