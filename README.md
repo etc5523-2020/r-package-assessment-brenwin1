@@ -54,27 +54,18 @@ Northern_hemis # countries in the Northern Hemisphere
 #> # … with 90 more rows
 ```
 
-Takes data frame and plots daily cases against date. With shaded area
+Takes data frame and plots daily cases against date with shaded area
 indicating winter months.
 
 ``` r
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 join_data <- left_join(filter(covidseasonality::covid_data, country == "Australia"), 
                        filter(covidseasonality::world, region == "Australia"), 
                        by = c("country" = "region"))
 
 join_data %>% 
   filter(country == "Australia") %>% 
-  plot_countries_hemis()
-#> Warning: Removed 1804 row(s) containing missing values (geom_path).
+  covidseasonality::plot_countries_hemis()
 ```
 
 <img src="man/figures/README-plot-eg-1.png" width="100%" />
