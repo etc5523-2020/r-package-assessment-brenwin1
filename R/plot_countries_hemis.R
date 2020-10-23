@@ -43,7 +43,7 @@ plot_countries_hemis <- function(x){
                fill = "sky blue", alpha = 0.3)
   }
   else if(unique(x$country) %in% Tropics$country){
-   base
+    base
   }
   else{NA}
 }
