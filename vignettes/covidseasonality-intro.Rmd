@@ -3,7 +3,7 @@ title: "An Introduction to `covidseasonality` package"
 output: 
   rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{An Introduction to covidseasonality package}
+  %\VignetteIndexEntry{An Introduction to `covidseasonality` package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -26,7 +26,7 @@ The `covidseasonality` package assesses the novel coronavirus' cases in each hem
 # The Shiny App
 
 <video width="720" height="400" controls>
-  <source src="shinyguide.mp4" type="video/mp4">
+  <source src="../man/figures/shinyguide.mp4" type="video/mp4">
 </video>
 
 ## Running the App
