@@ -31,6 +31,6 @@ Suggests:
     knitr,
     rmarkdown
 Remotes:
-  joachim-gassen/tidycovid19
+  joachim-gassen/tidycovid19,
   nset-ornl/wbstats
 VignetteBuilder: knitr
