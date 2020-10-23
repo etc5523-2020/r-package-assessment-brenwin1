@@ -173,11 +173,30 @@
 <p>We can use <code>summary_table</code> to summarise the total cases &amp; cases per 100,000 of the population as follows:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="va">join_data</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="../reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 5</span>
-<span class="co">#&gt;   country   total_cases total_cases_per_100k avg_cases avg_cases_per_100k</span>
-<span class="co">#&gt;   &lt;chr&gt;           &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;              &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 Australia    49507172              195184.      101.              0.398</span></pre></div>
+  <span class="fu"><a href="../reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<table class="table">
+<colgroup>
+<col width="12%">
+<col width="15%">
+<col width="26%">
+<col width="17%">
+<col width="28%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Country</th>
+<th align="right">Total cases</th>
+<th align="right">Total cases per 100k</th>
+<th align="right">average cases</th>
+<th align="right">average cases per 100k</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Australia</td>
+<td align="right">49,507,172</td>
+<td align="right">195,184</td>
+<td align="right">101</td>
+<td align="right">0</td>
+</tr></tbody>
+</table>
 <p>We could also make plots for countries in each hemisphere. First, to look at countries in Northern hemisphere, Southern hemisphere or Tropics, we use:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
 <span class="va">Northern_hemis</span>

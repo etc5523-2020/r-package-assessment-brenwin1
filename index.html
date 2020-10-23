@@ -89,7 +89,7 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p><code>covidseasonality</code> package contains all the tools needed to make the its corresponding <code>Shiny</code> app. This package aims to improve the app’s accessibility and readability. It also provides a means to review seasonal change in cases across the world.</p>
+<p><code>covidseasonality</code> package aims to assess the novel coronavirus seasonality effects by examining the cases in each hemisphere as cold weather migrates to the Northern Hemisphere. Also, it improves its corresponding app’s accessibility and readability.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -97,16 +97,16 @@
 <!-- ``` r -->
 <!-- install.packages("covidseasonality") -->
 <!-- ``` -->
-<p>You could install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<p>You can install the development version from GitHub with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"etc5523-2020/r-package-assessment-brenwin1"</span><span class="op">)</span></pre></div>
 </div>
-<div id="example" class="section level2">
+<div id="get-started" class="section level2">
 <h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<p>This is a basic example what the package includes</p>
-<p>inbuilt datasets with countries in the Tropics, Northern and Southern Hemisphere.</p>
+<a href="#get-started" class="anchor"></a>Get Started</h2>
+<p>This is a some basic examples what the package does</p>
+<p>Access inbuilt datasets such as countries in the Northern and Southern Hemisphere and Tropics</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/etc5523-2020/r-package-assessment-brenwin1">covidseasonality</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span>
@@ -126,17 +126,51 @@
 <span class="co">#&gt;  9 Bangladesh          </span>
 <span class="co">#&gt; 10 Bulgaria            </span>
 <span class="co">#&gt; # … with 90 more rows</span></pre></div>
-<p>Takes data frame and plots daily cases against date with shaded area indicating winter months. Now you can extend this to include countries in the world.</p>
+<p>Takes inbuilt data sets and plot daily cases against date with shaded area indicating winter months. Now you can extend this to include countries in the world.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="va">join_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">covidseasonality</span><span class="fu">::</span><span class="va"><a href="reference/covid_data.html">covid_data</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Australia"</span><span class="op">)</span>, 
-                       <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">covidseasonality</span><span class="fu">::</span><span class="va"><a href="reference/world.html">world</a></span>, <span class="va">region</span> <span class="op">==</span> <span class="st">"Australia"</span><span class="op">)</span>, 
-                       by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span> <span class="op">=</span> <span class="st">"region"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">join_data</span> <span class="op">&lt;-</span> <span class="fu">covidseasonality</span><span class="fu">::</span><span class="va"><a href="reference/country_list.html">country_list</a></span> <span class="op">%&gt;%</span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op">==</span> <span class="st">"Australia"</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">covidseasonality</span><span class="fu">::</span><span class="fu"><a href="reference/join_data.html">join_data</a></span><span class="op">(</span><span class="op">)</span>
 
 <span class="va">join_data</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op">==</span> <span class="st">"Australia"</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu">covidseasonality</span><span class="fu">::</span><span class="fu"><a href="reference/plot_countries_hemis.html">plot_countries_hemis</a></span><span class="op">(</span><span class="op">)</span></pre></div>
 <p><img src="reference/figures/README-plot-eg-1.png" width="100%"></p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="reference/join_data.html">join_data</a></span><span class="op">(</span><span class="va">join_data</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu"><a href="reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="op">)</span> </pre></div>
+<table class="table">
+<colgroup>
+<col width="12%">
+<col width="14%">
+<col width="26%">
+<col width="17%">
+<col width="29%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Country</th>
+<th align="right">Total cases</th>
+<th align="right">Total cases per 100k</th>
+<th align="right">average cases</th>
+<th align="right">average cases per 100k</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Australia</td>
+<td align="right">49,507,172</td>
+<td align="right">195,184</td>
+<td align="right">101</td>
+<td align="right">0</td>
+</tr></tbody>
+</table>
+<p>It can also launch the app with a single function. Furthermore, there are also inbuilt functions that controls the inputs of the app.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="co"># not run</span>
+<span class="co"># covidseasonality::launch_app()</span></pre></div>
+</div>
+<div id="learn-more" class="section level2">
+<h2 class="hasAnchor">
+<a href="#learn-more" class="anchor"></a>Learn more</h2>
+<p>Read <code><a href="articles/covidseasonality-intro.html">vignette("covidseasonality-intro")</a></code> for more details on how to use the package.</p>
 </div>
 </div>
   </div>
