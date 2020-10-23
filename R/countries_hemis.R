@@ -1,8 +1,11 @@
+utils::globalVariables("country")
 #' Determine countries to include in app's user interface
 #'
 #' @description Takes a list of country from inbuilt countries dataset (`Northern_hemis`, `Souther_hemis` & `Tropics`).
 #' @return A drop down menu (i.e. `Shiny`'s `selectInput`) of selected countries
+#' @import dplyr
 #' @name countries_hemis
+#' @param country A tibble filtered from `join_data`. see `?join_data`
 #' @export
 #' @examples
 #' library(covidseasonality)

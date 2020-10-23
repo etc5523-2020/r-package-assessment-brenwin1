@@ -22,7 +22,7 @@ plot_countries_hemis <- function(x){
 
   # adding respective sky-blue shdaed rectangles representing winter
   if(unique(x$country) %in% Northern_hemis$country){
-    base +
+    p <- base +
       annotate("rect",
                xmin = as.Date("2020-12-01"),
                xmax = as.Date("2020-12-31"),
@@ -33,17 +33,22 @@ plot_countries_hemis <- function(x){
                xmax = as.Date("2020-02-28"),
                ymin = -Inf, ymax = Inf,
                fill = "sky blue", alpha = 0.3)
+
+    p
   }
   else if(unique(x$country) %in% Southern_hemis$country){
-    base +
+    p <- base +
       annotate("rect",
                xmin = as.Date("2020-06-01"),
                xmax = as.Date("2020-08-31"),
                ymin = -Inf, ymax = Inf,
                fill = "sky blue", alpha = 0.3)
+
+    p
   }
   else if(unique(x$country) %in% Tropics$country){
-    base
+    p <- base
+    p
   }
   else{NA}
 }

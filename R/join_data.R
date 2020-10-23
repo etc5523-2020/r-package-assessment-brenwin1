@@ -5,8 +5,6 @@
 #' @return A tibble containing map coordinates and dates
 #' @export
 #'
-#' @examples
-#' join_data()
 #'
 join_data <- function(countries){
   countries <- countries %>% pull(country)

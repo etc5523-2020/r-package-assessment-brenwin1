@@ -22,7 +22,8 @@ Imports:
     magrittr,
     tibble,
     ggplot2,
-    scales
+    scales,
+    wbstats
 Depends: 
     R (>= 2.10)
 Suggests: 
@@ -31,4 +32,5 @@ Suggests:
     rmarkdown
 Remotes:
   joachim-gassen/tidycovid19
+  nset-ornl/wbstats
 VignetteBuilder: knitr

@@ -1,7 +1,11 @@
 #' Countries in the each Hemisphere and the Tropics
 #'
 #' @description These data sets (tibbles) contain 203 countries classified in Northern & Southern Hemisphere and Tropics.
-#' @usage Northern_hemis, Southern_hemis, Tropics
+#' @aliases Southern_hemis Tropics
+#' @usage Northern_hemis
+#' @usage Southern_hemis
+#' @usage Tropics
+#'
 #' @format 3 data frames with 1 variable(`country`) each:
 #' \describe{
 #' \item{`Northern_hemis`}{countries in Northern hemisphere}

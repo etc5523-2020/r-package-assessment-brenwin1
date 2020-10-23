@@ -21,7 +21,11 @@
 \href{https://worldpopulationreview.com/country-rankings/tropical-countries}{worldpopulationreview} \cr
 }
 \usage{
-Northern_hemis, Southern_hemis, Tropics
+Northern_hemis
+
+Southern_hemis
+
+Tropics
 }
 \description{
 These data sets (tibbles) contain 203 countries classified in Northern & Southern Hemisphere and Tropics.

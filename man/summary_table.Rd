@@ -15,3 +15,9 @@ A summarized tibble of cases and cases per 100,000 of population.
 \description{
 Provides a summary table of cases
 }
+\examples{
+# NOT RUN
+# library(dplyr)
+# join_data \%>\%
+    #summary_table()
+}

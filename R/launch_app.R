@@ -1,10 +1,7 @@
 #' Launch `covidseasonality` app
-#' #'
+#' @description Launch covidseasonality Shiny App embedded in the `covidseasonality` downloadable from [GitHub](https://github.com/etc5523-2020/r-package-assessment-brenwin1)
 #' @return A shiny application
 #' @export
-#'
-#' @examples
-#' launch_app()
 #'
 launch_app <- function() {
   # Locates the app that exists in covidseasonality package

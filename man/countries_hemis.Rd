@@ -6,6 +6,9 @@
 \usage{
 countries_hemis(country)
 }
+\arguments{
+\item{country}{A tibble filtered from \code{join_data}. see \code{?join_data}}
+}
 \value{
 A drop down menu (i.e. \code{Shiny}'s \code{selectInput}) of selected countries
 }

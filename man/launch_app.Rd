@@ -2,8 +2,7 @@
 % Please edit documentation in R/launch_app.R
 \name{launch_app}
 \alias{launch_app}
-\title{Launch \code{covidseasonality} app
-#'}
+\title{Launch \code{covidseasonality} app}
 \usage{
 launch_app()
 }
@@ -11,10 +10,5 @@ launch_app()
 A shiny application
 }
 \description{
-Launch \code{covidseasonality} app
-#'
-}
-\examples{
-launch_app()
-
+Launch covidseasonality Shiny App embedded in the \code{covidseasonality} downloadable from \href{https://github.com/etc5523-2020/r-package-assessment-brenwin1}{GitHub}
 }

@@ -4,8 +4,12 @@
 #'
 #' @return A summarized tibble of cases and cases per 100,000 of population.
 #' @export
-#'
+#' @importFrom magrittr %>%
 #' @examples
+#' # NOT RUN
+#' # library(dplyr)
+#' # join_data %>%
+#'     #summary_table()
 summary_table <- function(x){
   x %>%
     group_by(country) %>%

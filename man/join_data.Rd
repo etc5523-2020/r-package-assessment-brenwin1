@@ -15,7 +15,3 @@ A tibble containing map coordinates and dates
 \description{
 Join covid and map data for covidseasonality App
 }
-\examples{
-join_data()
-
-}
