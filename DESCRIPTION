@@ -22,12 +22,13 @@ Imports:
     tibble,
     ggplot2,
     scales,
-    wbstats
+    wbstats,
+    kableExtra,
+    knitr
 Depends: 
     R (>= 2.10)
 Suggests: 
     testthat,
-    knitr,
     rmarkdown
 Remotes:
   joachim-gassen/tidycovid19,

@@ -7,10 +7,10 @@
 
 <!-- badges: end -->
 
-`covidseasonality` package contains all the tools needed to make the its
-corresponding `Shiny` app. This package aims to improve the app’s
-accessibility and readability. It also provides a means to review
-seasonal change in cases across the world.
+`covidseasonality` package aims to assess the novel coronavirus
+seasonality effects by examining the cases in each hemisphere as cold
+weather migrates to the Northern Hemisphere. Also, it improves its
+corresponding app’s accessibility and readability.
 
 ## Installation
 
@@ -22,20 +22,19 @@ seasonal change in cases across the world.
 
 <!-- ``` -->
 
-You could install the development version from
-[GitHub](https://github.com/) with:
+You can install the development version from GitHub with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 ```
 
-## Example
+## Get Started
 
-This is a basic example what the package includes
+This is a some basic examples what the package does
 
-inbuilt datasets with countries in the Tropics, Northern and Southern
-Hemisphere.
+Access inbuilt datasets such as countries in the Northern and Southern
+Hemisphere and Tropics
 
 ``` r
 library(covidseasonality)
@@ -58,19 +57,40 @@ Northern_hemis # countries in the Northern Hemisphere
 #> # … with 90 more rows
 ```
 
-Takes data frame and plots daily cases against date with shaded area
-indicating winter months. Now you can extend this to include countries
-in the world.
+Takes inbuilt data sets and plot daily cases against date with shaded
+area indicating winter months. Now you can extend this to include
+countries in the world.
 
 ``` r
 library(dplyr)
-join_data <- left_join(filter(covidseasonality::covid_data, country == "Australia"), 
-                       filter(covidseasonality::world, region == "Australia"), 
-                       by = c("country" = "region"))
+join_data <- covidseasonality::country_list %>% 
+  filter(country == "Australia") %>% 
+  covidseasonality::join_data()
 
 join_data %>% 
-  filter(country == "Australia") %>% 
   covidseasonality::plot_countries_hemis()
 ```
 
 <img src="man/figures/README-plot-eg-1.png" width="100%" />
+
+``` r
+join_data(join_data) %>% 
+  summary_table() 
+```
+
+| Country   | Total cases | Total cases per 100k | average cases | average cases per 100k |
+| :-------- | ----------: | -------------------: | ------------: | ---------------------: |
+| Australia |  49,507,172 |              195,184 |           101 |                      0 |
+
+It can also launch the app with a single function. Furthermore, there
+are also inbuilt functions that controls the inputs of the app.
+
+``` r
+# not run
+# covidseasonality::launch_app()
+```
+
+## Learn more
+
+Read `vignette("covidseasonality-intro")` for more details on how to use
+the package.

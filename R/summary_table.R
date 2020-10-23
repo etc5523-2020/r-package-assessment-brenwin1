@@ -14,8 +14,14 @@ summary_table <- function(x){
   x %>%
     group_by(country) %>%
     mutate(cases_per_100k = 100000*cases/population) %>%
-    summarise(total_cases = sum(cases, na.rm = T),
-              total_cases_per_100k = sum(cases_per_100k, na.rm = T),
-              avg_cases = mean(cases, na.rm = T),
-              avg_cases_per_100k = mean(cases_per_100k, na.rm = T))
+    summarise(total_cases = scales::comma(sum(cases, na.rm = T)),
+              total_cases_per_100k = scales::comma(sum(cases_per_100k, na.rm = T)),
+              avg_cases = scales::comma(mean(cases, na.rm = T)),
+              avg_cases_per_100k = scales::comma(mean(cases_per_100k, na.rm = T))) %>%
+    knitr::kable(table.attr = "class='summary_table'",
+                 digits = 2,
+                 col.names = c("Country", "Total cases", "Total cases per 100k", "average cases", "average cases per 100k" ),
+                 align = "lrrrr") %>%
+    kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "border"),
+                              fixed_thead = list(enabled = T, background = "blue"))
 }
