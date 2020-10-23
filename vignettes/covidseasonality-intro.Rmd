@@ -19,15 +19,20 @@ knitr::opts_chunk$set(
 )
 ```
 
+# <img src='../man/figures/logo.png' align="right" height="139" />
+
+
 # Introduction
 The `covidseasonality` package assesses the novel coronavirus' cases in each hemisphere and the tropics, as cold weather migrates to the Northern Hemisphere in pandemic for the first time. It has also an embedded shiny app.
 
 
 # The Shiny App
+A preview of the app:
 
 <video width="720" height="400" controls>
-  <source src="../man/figures/shinyguide.mp4" type="video/mp4">
+  <source src="../vignettes/shinyguide.mp4" type="video/mp4">
 </video>
+
 
 ## Running the App
 You can run the embedded Shiny app via one line of code. 
@@ -91,7 +96,9 @@ join_data %>%
 
 
 ```{r}
-# WIP: These plots constructed using `ggplot2` allowing for additions if desired. For example, instead of overlaying each countr(ies) plots over one another we could `facet` to see the daily cases trend of both countries.
+# WIP: These plots constructed using `ggplot2` allowing for additions if desired. 
+# For example, instead of overlaying each countr(ies) plots over one another we could `facet` 
+# to see the daily cases trend of both countries.
 
 # 2 countries in Southern_hemis
 

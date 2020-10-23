@@ -6,7 +6,7 @@ navbar:
     home: ~
     help:
       text: Get Started
-      href: https://exts.ggplot2.tidyverse.org/gallery/
+      href: https://etc5523-2020.github.io/r-package-assessment-brenwin1/articles/covidseasonality-intro.html
     github:
       icon: fa-github fa-lg
       href: https://github.com/etc5523-2020/r-package-assessment-brenwin1

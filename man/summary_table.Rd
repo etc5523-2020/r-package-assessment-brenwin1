@@ -4,10 +4,10 @@
 \alias{summary_table}
 \title{Provides a summary table of cases}
 \usage{
-summary_table(x)
+summary_table(data)
 }
 \arguments{
-\item{x}{See \code{?join_data} with dates and daily coronavirus cases.}
+\item{data}{See \code{?join_data} with dates and daily coronavirus cases.}
 }
 \value{
 A summarized tibble of cases and cases per 100,000 of population.
@@ -16,8 +16,8 @@ A summarized tibble of cases and cases per 100,000 of population.
 Provides a summary table of cases
 }
 \examples{
-# NOT RUN
+# NOT RUN:
 # library(dplyr)
 # join_data \%>\%
-    #summary_table()
+    # summary_table()
 }

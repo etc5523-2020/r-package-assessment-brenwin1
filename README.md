@@ -29,6 +29,16 @@ You can install the development version from GitHub with:
 devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 ```
 
+# The Shiny App
+
+A preview of the app:
+
+<video width="720" height="400" controls>
+
+<source src="man/figures/shinyguide.mp4" type="video/mp4">
+
+</video>
+
 ## Get Started
 
 This is a some basic examples what the package does
@@ -72,6 +82,9 @@ join_data %>%
 ```
 
 <img src="man/figures/README-plot-eg-1.png" width="100%" />
+
+Provide summaries of total cases and total cases per 100,000 of the
+country’s population.
 
 ``` r
 join_data(join_data) %>% 

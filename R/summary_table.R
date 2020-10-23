@@ -1,16 +1,18 @@
 #' Provides a summary table of cases
 #'
-#' @param x See `?join_data` with dates and daily coronavirus cases.
+#' @param data See `?join_data` with dates and daily coronavirus cases.
 #'
 #' @return A summarized tibble of cases and cases per 100,000 of population.
 #' @export
 #' @importFrom magrittr %>%
 #' @examples
-#' # NOT RUN
+#' # NOT RUN:
 #' # library(dplyr)
 #' # join_data %>%
-#'     #summary_table()
-summary_table <- function(x){
+#'     # summary_table()
+summary_table <- function(data){
+  x <- data
+
   x %>%
     group_by(country) %>%
     mutate(cases_per_100k = 100000*cases/population) %>%
