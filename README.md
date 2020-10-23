@@ -33,15 +33,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 
 A preview of the app:
 
-<figure class="video_container">
-
-<video controls="true" allowfullscreen="true" poster="man/figures/poster.png">
-
-<source src="man/figures/shinyguide.mp4" type="video/mp4">
-
-</video>
-
-</figure>
+![video](%22man/figures/shinyguide.gif%22)
 
 ## Get Started
 
