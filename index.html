@@ -46,7 +46,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="https://exts.ggplot2.tidyverse.org/gallery/">Get Started</a>
+  <a href="https://etc5523-2020.github.io/r-package-assessment-brenwin1/articles/covidseasonality-intro.html">Get Started</a>
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
@@ -83,6 +83,7 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="covidseasonality-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#covidseasonality-" class="anchor"></a>covidseasonality <img src="reference/figures/logo.png" align="right" height="139">
@@ -102,7 +103,12 @@
 <span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"etc5523-2020/r-package-assessment-brenwin1"</span><span class="op">)</span></pre></div>
 </div>
-<div id="get-started" class="section level2">
+</div>
+<div id="the-shiny-app" class="section level1">
+<h1 class="hasAnchor">
+<a href="#the-shiny-app" class="anchor"></a>The Shiny App</h1>
+<p>A preview of the app:</p>
+<video width="720" height="400" controls><source src="man/figures/shinyguide.mp4" type="video/mp4"></source></video><div id="get-started" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-started" class="anchor"></a>Get Started</h2>
 <p>This is a some basic examples what the package does</p>
@@ -136,6 +142,7 @@
 <span class="va">join_data</span> <span class="op">%&gt;%</span> 
   <span class="fu">covidseasonality</span><span class="fu">::</span><span class="fu"><a href="reference/plot_countries_hemis.html">plot_countries_hemis</a></span><span class="op">(</span><span class="op">)</span></pre></div>
 <p><img src="reference/figures/README-plot-eg-1.png" width="100%"></p>
+<p>Provide summaries of total cases and total cases per 100,000 of the country’s population.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="reference/join_data.html">join_data</a></span><span class="op">(</span><span class="va">join_data</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu"><a href="reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="op">)</span> </pre></div>
@@ -173,6 +180,7 @@
 <p>Read <code><a href="articles/covidseasonality-intro.html">vignette("covidseasonality-intro")</a></code> for more details on how to use the package.</p>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
