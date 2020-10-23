@@ -1,0 +1,12 @@
+navbar:
+  structure:
+    left: [help]
+    right: [github] # github icon on right
+  components:
+    home: ~
+    help:
+      text: Get Started
+      href: https://exts.ggplot2.tidyverse.org/gallery/
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/etc5523-2020/r-package-assessment-brenwin1

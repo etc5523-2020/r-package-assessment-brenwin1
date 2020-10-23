@@ -57,10 +57,10 @@ join_data
 ## Controlling what goes into drop down menu in Tab 2
 You could also determine countries that goes into drop down menu for each hemisphere or Tropics. This might help to declutter the menu.
 ```{r countries_hemis}
-# outputs a Shiny selectInput
-x <- Southern_hemis %>% 
-  filter(country %in% c("Australia", "South Africa")) %>% 
-  countries_hemis()
+# --- outputs a Shiny selectInput
+# x <- Southern_hemis %>% 
+#   filter(country %in% c("Australia", "South Africa")) %>% 
+#   countries_hemis()
 ```
 
 
