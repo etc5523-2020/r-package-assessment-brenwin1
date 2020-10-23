@@ -29,4 +29,6 @@ Suggests:
     testthat,
     knitr,
     rmarkdown
+Remotes:
+  joachim-gassen/tidycovid19
 VignetteBuilder: knitr
