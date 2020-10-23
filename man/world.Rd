@@ -5,7 +5,7 @@
 \alias{world}
 \title{World dataset including Hemisphere}
 \format{
-An object of class \code{data.frame} with 99338 rows and 7 columns.
+An object of class \code{data.frame} with 99338 rows and 5 columns.
 }
 \source{
 \href{https://github.com/tidyverse/ggplot2}{ggplot2 map data} \cr

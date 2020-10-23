@@ -52,7 +52,8 @@ covid_data <- data %>%
     country == "Trinidad & Tobago" ~ "Trinidad",
     country == "St. Vincent & Grenadines" ~ "Saint Vincent",
     TRUE ~ country
-  ))
+  )) %>%
+  select(-c(iso3c, region))
 
 # World data set
 world <- world %>%
@@ -92,11 +93,11 @@ world <- world %>%
   mutate(hemisphere = case_when(
     region %in% tropical ~ "T",
     TRUE ~ hemisphere
-  ))
+  )) %>%
+  select(-c(order, subregion))
 
 join_data <- left_join(covid_data, world,
-                       by = c("country" = "region")) %>%
-  select(-c(iso3c, order, subregion, region))
+                       by = c("country" = "region"))
 
 # countries in Northern hemisphere
 Northern_hemis <- join_data %>%
@@ -122,6 +123,9 @@ usethis::use_data(Tropics, overwrite = TRUE)
 usethis::use_data(covid_data, overwrite = TRUE)
 usethis::use_data(world, overwrite = TRUE)
 
+country_list <- join_data %>%
+  distinct(country, .keep_all = T) %>%
+  select(country, hemisphere)
 
-
+usethis::use_data(country_list, overwrite = TRUE)
 

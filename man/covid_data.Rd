@@ -5,7 +5,7 @@
 \alias{covid_data}
 \title{Coronavirus dataset with daily cases}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 54423 rows and 8 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 54423 rows and 6 columns.
 }
 \source{
 \href{https://github.com/joachim-gassen/tidycovid19}{tidycovid19 package}

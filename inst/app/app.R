@@ -16,9 +16,8 @@ options(spinner.color="#d3d3d3")
 # ---------- join data
 data <- covidseasonality::covid_data
 
-join_data <- left_join(covidseasonality::covid_data,
-                       covidseasonality::world,
-                       by = c("country" = "region"))
+join_data <- covidseasonality::country_list %>%
+  join_data()
 
 Northern_hemis <- covidseasonality::Northern_hemis
 

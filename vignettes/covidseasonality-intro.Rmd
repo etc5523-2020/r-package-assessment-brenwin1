@@ -1,0 +1,63 @@
+---
+title: "An Introduction to `covidseasonality` package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An Introduction to covidseasonality package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Introduction
+The `covidseasonality` package assesses the novel coronavirus' cases in each hemisphere and the tropics, as cold weather migrates to the Northern Hemisphere in pandemic for the first time. It has also an embedded shiny app.
+
+
+# The Shiny App
+
+<iframe width="720" height="400" src="../data/shinyguide.mp4" frameborder="0" allowfullscreen></iframe>
+
+You can run the embedded Shiny app via one line of code. 
+```{r setup}
+library(covidseasonality)
+# launch_app()
+```
+
+First you may want to look at the country and their corresponding hemisphere
+```{r}
+library(tibble)
+country_list
+```
+
+The app relies on one data set that can be obtained through a single function `join_data()`. Simply filter to the countries you want to analyse in the app.
+```{r}
+library(dplyr)
+
+country_list %>% 
+  filter(country == "Australia") %>% 
+  covidseasonality::join_data()
+```
+
+Following shows a simple workflow to launch the app.
+
+# Functions outside the App
+These functions seek to facilitate analysis through visualization and tables. Plots are made with `ggplot2` allowing for additions if desired.
+
+
+
+
+
+
+
+
+
+
+
+
