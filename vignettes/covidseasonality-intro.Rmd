@@ -29,9 +29,7 @@ The `covidseasonality` package assesses the novel coronavirus' cases in each hem
 # The Shiny App
 A preview of the app:
 
-<video width="720" height="400" controls>
-  <source src="../vignettes/shinyguide.mp4" type="video/mp4">
-</video>
+![Alt Text](../vignettes/shinyguide.gif)
 
 
 ## Running the App

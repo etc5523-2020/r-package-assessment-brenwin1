@@ -33,7 +33,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 
 A preview of the app:
 
-![video](%22man/figures/shinyguide.gif%22)
+![Alt Text](man/figures/shinyguide.gif)
 
 ## Get Started
 

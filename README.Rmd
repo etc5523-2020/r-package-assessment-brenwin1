@@ -37,7 +37,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 # The Shiny App
 A preview of the app: 
 
-![video]("man/figures/shinyguide.gif")
+![Alt Text](man/figures/shinyguide.gif)
 
 
 ## Get Started
