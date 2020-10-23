@@ -31,7 +31,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-brenwin1")
 
 # The Shiny App
 
-A video preview of the app:
+A preview of the app:
 
 <video width="720" height="400" controls>
 
